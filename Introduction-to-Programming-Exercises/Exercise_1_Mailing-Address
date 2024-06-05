@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+def print_MailingAddress():
+    name = "Clément Sampebgo"
+    street = "1 University Avenue, Berekuso"
+    city = "Accra"
+    zip_code = "PMB CT3"
+    country = "GHANA"
+    print(f"{name} \n{street}")
+    print(f"{city}, {zip_code} \n{country}")
+    
+print_MailingAddress()
