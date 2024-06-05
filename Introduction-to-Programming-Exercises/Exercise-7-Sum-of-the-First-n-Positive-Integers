@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+def sum_n_positiveIntegers():
+    """My sum of positive integers function
+
+    Prompts the user to enter a positive integer n and calculates the sum
+    of all integers from 1 to n.
+
+    Args:
+        None
+
+    Returns:
+        None: The result is printed to the console.
+    """
+    n = int(input("Enter a positive number: "))
+    sum_n = (n * (n + 1)) / 2
+    print(f"The sum of all integers from 1 to {n} is: {sum_n:.1f}")
+
+sum_n_positiveIntegers()
