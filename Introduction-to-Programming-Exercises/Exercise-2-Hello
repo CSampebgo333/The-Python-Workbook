@@ -1,5 +1,16 @@
 #!/usr/bin/python3
 def say_hello_to():
+    """My greeting function
+
+    Prompts the user to enter their name and then prints a greeting.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     name = input("Please, enter your name: ")
     print(f"Hello {name}!")
+
 say_hello_to()

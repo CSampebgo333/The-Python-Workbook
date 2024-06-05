@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 def print_MailingAddress():
+    """Prints the mailing address of Clément Sampebgo
+
+    This function prints the name, street, city, zip code, and country of
+    Clément Sampebgo in a formatted manner.
+    """
     name = "Clément Sampebgo"
     street = "1 University Avenue, Berekuso"
     city = "Accra"
@@ -7,5 +12,5 @@ def print_MailingAddress():
     country = "GHANA"
     print(f"{name} \n{street}")
     print(f"{city}, {zip_code} \n{country}")
-    
+
 print_MailingAddress()
