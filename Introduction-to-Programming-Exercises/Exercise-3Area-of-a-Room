@@ -1,0 +1,20 @@
+#!/bin/usr/python3
+def find_AreaRoom():
+    """Calculate the area of a room
+
+    Prompts the user to enter the width and length of the room,
+    calculates the area, and prints it in square feet.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    width = float(input("Enter the width: "))
+    length = float(input("Enter the length: "))
+    area = width * length
+    unit = "square foot"
+    print(f"The area of the room is: {area} {unit}")
+
+find_AreaRoom()
