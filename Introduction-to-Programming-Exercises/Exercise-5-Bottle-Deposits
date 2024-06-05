@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+def find_your_refund():
+    """Calculate the total refund for drink containers
+
+    This function prompts the user to input the number of drink containers
+    holding one liter or less, and the number of drink containers holding
+    more than one liter. It then calculates the total refund based on these
+    inputs.
+
+    Returns:
+        None
+    """
+    containers_1 = int(input("Number of drink containers holding one liter or less have: "))
+    containers_2 = int(input("Number of drink containers holding more than one liter: "))
+
+    # Calculate refund for containers holding one liter or less
+    refund_1 = float(containers_1 * 0.10)
+
+    # Calculate refund for containers holding more than one liter
+    refund_2 = float(containers_2 * 0.25)
+
+    # Calculate the total refund
+    total_refund = refund_1 + refund_2
+
+    # Print the total refund
+    print(f"Total Refund: ${total_refund:.2f}")
+
+find_your_refund()
