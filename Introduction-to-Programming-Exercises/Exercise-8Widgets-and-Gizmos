@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+def sum_weighs():
+    """Calculate the total weight of widgets and gizmos
+
+    This function prompts the user to input the number of widgets and gizmos,
+    calculates their total weight, and prints the result.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    n_widgets = int(input("Enter the number of Widgets: "))  # Get the number of widgets from the user
+    n_gizmos = int(input("Enter the number of Gizmos: "))    # Get the number of gizmos from the user
+    weigh_widgets = n_widgets * 75  # Calculate the weight of widgets (each widget weighs 75 grams)
+    weigh_gizmos = n_gizmos * 112   # Calculate the weight of gizmos (each gizmo weighs 112 grams)
+    total_weigh = weigh_widgets + weigh_gizmos  # Calculate the total weight
+    print(f"Total Weight: {total_weigh} grams")  # Print the total weight
+
+sum_weighs()
