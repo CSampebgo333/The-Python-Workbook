@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+def find_AreaRoom():
+    """Calculate the area of a room
+
+    Prompts the user to enter the width and length of the room,
+    calculates the area, and prints it in square feet.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    width = float(input("Enter the width in feet: "))
+    length = float(input("Enter the length in feet: "))
+    area_in_feet = width * length
+    acres_to_feet = 43560
+    area_in_acres = float(area_in_feet / acres_to_feet)
+    unit = "square acres"
+    print(f"The area of the room in acres is: {area_in_acres:.3f} {unit}")
+
+find_AreaRoom()
