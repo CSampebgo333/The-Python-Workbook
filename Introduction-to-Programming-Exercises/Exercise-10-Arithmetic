@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+from math import log10, pow
+
+def do_aritmetic():
+    """Perform various arithmetic operations on two integers.
+
+    Prompts the user to enter two integers, then calculates and prints
+    their sum, difference, product, integer division, remainder,
+    base-10 logarithm of the first integer, and the first integer
+    raised to the power of the second integer.
+    """
+    a = int(input("Enter number a: "))  # Get the first integer from the user
+    b = int(input("Enter number b: "))  # Get the second integer from the user
+
+    # Perform arithmetic operations
+    add = a + b  # Calculate sum
+    sub = a - b  # Calculate difference
+    mul = a * b  # Calculate product
+    div = a // b  # Calculate integer division
+    modulo = a % b  # Calculate remainder
+    log_a = log10(a)  # Calculate base-10 logarithm of the first integer
+    power = pow(a, b)  # Calculate first integer raised to the power of the second integer
+
+    # Print the results
+    print(f"Sum: {a} + {b} = {add}")
+    print(f"Subtraction: {a} - {b} = {sub}")
+    print(f"Multiplication: {a} * {b} = {mul}")
+    print(f"Division: {a} / {b} = {div}")
+    print(f"Remainder: {a} divided by {b} remained {modulo}")
+    print(f"Log10: log10 {a} = {log_a:.2f}")
+    print(f"Power: {a} ** {b} = {power:.2f}")
+
+# Call the function to perform arithmetic operations
+do_aritmetic()
