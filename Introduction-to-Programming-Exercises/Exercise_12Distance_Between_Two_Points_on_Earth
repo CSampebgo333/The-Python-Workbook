@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+import math as m
+
+def distance_on_Earth():
+    """Calculate the distance between two points on the Earth
+
+    This function prompts the user to enter the coordinates of two points (latitude and longitude)
+    and calculates the great-circle distance between them using the Haversine formula.
+
+    Returns:
+        None. Prints the area of the Earth and the distance between the two points.
+    """
+    print("Enter the coordinates of the latitude")
+    t1 = m.radians(float(input("t1: ")))
+    g1 = m.radians(float(input("g1: ")))
+    print("Enter the coordinates of the longitude")
+    t2 = m.radians(float(input("t2: ")))
+    g2 = m.radians(float(input("g2: ")))
+    g1_g2 = m.radians(g1 - g2)
+    earth_Radius = 6371.01
+    earth_Area = 4 * m.pi * earth_Radius ** 2
+    distance = earth_Radius * m.acos(m.sin(t1) * m.sin(t2) + m.cos(t1) * m.cos(t2) * m.cos(g1_g2))
+    print(f"Area of the Earth is: {earth_Area:.3f} km²")
+    print(f"The Distance is: {distance:.3f} km")
+
+distance_on_Earth()
