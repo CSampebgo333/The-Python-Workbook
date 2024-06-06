@@ -1,0 +1,71 @@
+#!/usr/bin/python3
+def make_change():
+    """Calculate and print the breakdown of a given amount of cents into coins.
+
+    Prompts the user to enter the number of cents and then calculates the
+    number of toonies, loonies, quarters, dimes, nickels, and pennies 
+    needed to make that amount. Prints the result for each coin type if 
+    there is at least one of that coin.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    cents_number = int(input("Enter the number of cents: "))
+    
+    # Define the value of each coin type in cents
+    toonie_rate, loonie_rate, quarter_rate, dime_rate, nickel_rate, pennie_rate = 200, 100, 25, 10, 5, 1
+    
+    # Calculate the number of each coin type
+    toonies = cents_number // toonie_rate
+    remainer = cents_number % toonie_rate
+    
+    loonies = remainer // loonie_rate
+    remainer = remainer % loonie_rate
+    
+    quarters = remainer // quarter_rate
+    remainer = remainer % quarter_rate
+    
+    dimes = remainer // dime_rate
+    remainer = remainer % dime_rate
+    
+    nickels = remainer // nickel_rate
+    remainer = remainer % nickel_rate
+    
+    pennies = remainer // pennie_rate
+    
+    # Print the number of each coin type if greater than 0
+    if toonies > 0:
+        print(f"{toonies} Toonies")
+    else:
+        pass
+    
+    if loonies > 0:
+        print(f"{loonies} Loonies")
+    else:
+        pass
+    
+    if quarters > 0:
+        print(f"{quarters} Quarters")
+    else:
+        pass
+    
+    if dimes > 0:
+        print(f"{dimes} Dimes")
+    else:
+        pass
+    
+    if nickels > 0:
+        print(f"{nickels} Nickels")
+    else:
+        pass
+    
+    if pennies > 0:
+        print(f"{pennies} Pennies")
+    else:
+        pass
+
+# Call the function to execute
+make_change()
