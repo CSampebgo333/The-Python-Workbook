@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+def converte_MPG_to_LKM():
+    """Convert MPG to L/100 km
+
+    This function converts a fuel efficiency value from miles per gallon (MPG)
+    to liters per 100 kilometers (L/100 km).
+
+    The conversion is based on the fact that 1 MPG is equivalent to 235.215 L/100 km.
+
+    Args:
+        None. The function takes input from the user.
+
+    Returns:
+        None. The function prints the result.
+    """
+    _MPG_value = float(input("Enter the value in mile-per-gallon: "))
+    _MPG_to_100pKM = 235.215
+    _100_per_KM_value = _MPG_to_100pKM / _MPG_value
+    print(f"{_MPG_value} MPG = {_100_per_KM_value:.3f} L/100 km")
+    
+converte_MPG_to_LKM()
