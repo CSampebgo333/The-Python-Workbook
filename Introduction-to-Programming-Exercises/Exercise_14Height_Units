@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+def convert_HeightUnits():
+    """
+    Convert height in feet and inches to centimeters
+
+    Prompts the user to enter a height in feet and inches, then converts 
+    this height to centimeters and prints the result.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    # Prompt the user to enter the number of feet and inches
+    prompt = "Enter the number of feet, 'press space' followed by the number of inches: "
+    n_feet, n_inches = map(int, input(prompt).split())
+    
+    # Constants for conversion
+    foot_to_inches = 12
+    inches_to_cm = 2.54
+    
+    # Calculate total height in centimeters
+    total_cm = (n_feet * foot_to_inches + n_inches) * inches_to_cm
+    
+    # Print the result
+    print(f"\n{n_feet} feet + {n_inches} inches = {total_cm} centimeters")
+
+# Call the function to convert height units
+convert_HeightUnits()
