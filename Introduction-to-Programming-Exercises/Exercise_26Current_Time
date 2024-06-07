@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+from time import asctime
+
+def find_currentTime():
+    """
+    My current time function
+
+    This function finds the current time and prints it.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    current_time = asctime()
+    print(f"The current time is: {current_time}")
+
+find_currentTime()
