@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+def play_with_DistanceUnits():
+    """
+    Convert a measurement in feet to miles, yards, and inches.
+
+    This function prompts the user to enter a measurement in feet, 
+    then converts this measurement into miles, yards, and inches.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    feet = int(input("Enter the measurement in feet: "))
+    mile_to_feet = 5280
+    yard_to_feet = 3
+    feet_to_inche = 12
+    
+    miles = feet // mile_to_feet
+    remainer = feet % mile_to_feet
+    yards = remainer // yard_to_feet
+    remainer = remainer % yard_to_feet
+    inches = remainer * feet_to_inche
+    
+    print(f"{feet} feet = {miles} miles, {yards} yards, and {inches} inches.")
+    
+play_with_DistanceUnits()
