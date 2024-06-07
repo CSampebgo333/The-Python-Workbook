@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+from math import pi as i, pow
+
+def find_AreaVolume():
+    """
+    Function to calculate the area of a circle and the volume of a sphere
+
+    Prompts the user to input the radius and then calculates:
+        - The area of the circle with the given radius
+        - The volume of the sphere with the given radius
+
+    Returns:
+        None: This function prints the results directly
+    """
+    r = float(input("Enter the radius: "))
+    area = i * r ** 2
+    volume = (4 * i * pow(r, 3)) / 3
+    print(f"The area of the circle of radius {r} is: {area:.3f} square feet")
+    print(f"The volume of the sphere of radius {r} is: {volume:.3f} cubic feet.")
+    
+find_AreaVolume()
