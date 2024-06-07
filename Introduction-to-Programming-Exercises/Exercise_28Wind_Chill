@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+def Wild_Chill_Index():
+    """
+    Calculate the Wind Chill Index
+
+    This function calculates the wind chill index based on the input air 
+    temperature and wind speed. The formula is applicable only when the 
+    air temperature is less than or equal to 10 degrees Celsius and the 
+    wind speed is greater than 4.8 km/h.
+
+    Args:
+        None. The function prompts the user to input the air temperature 
+        in Celsius and the wind speed in km/h.
+
+    Returns:
+        None. The function prints the wind chill index or a message stating 
+        that the formula cannot be applied to the provided data.
+    """
+    t_a = float(input("Enter the air temperature in Celsius: "))
+    v = float(input("Enter the wind speed in km/h: "))
+    if t_a <= 10 and v > 4.8:
+        w_c_i = 13.12 + 0.6215 * t_a - 11.37 * v ** 0.16 + 0.3965 * t_a * v ** 0.16
+        print(f"The wind chill index is: {w_c_i:.2f}")
+    else:
+        print("The wind chill formula cannot apply to your data.")
+    
+Wild_Chill_Index()
