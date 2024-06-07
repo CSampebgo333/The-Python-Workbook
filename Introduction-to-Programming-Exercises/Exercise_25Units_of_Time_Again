@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+def convert_from_second_to():
+    """
+    Convert seconds to days, hours, minutes, and seconds
+
+    Prompts the user to enter a number of seconds, then converts
+    and displays that duration in days, hours, minutes, and seconds.
+    """
+    s = int(input("Enter the number of seconds: "))
+    d = s // (3600 * 24)
+    remainder = s % (3600 * 24)
+    h = remainder // 3600
+    remainder = remainder % 3600
+    m = remainder // 60
+    remainder = remainder % 60
+    s_1 = remainder
+    
+    # Formatting days, hours, minutes, and seconds to be two digits
+    if d < 10:
+        d = f"0{d}"
+    else:
+        pass
+    if h < 10:
+        h = f"0{h}"
+    else:
+        pass
+    if m < 10:
+        m = f"0{m}"
+    else:
+        pass
+    if s_1 < 10:
+        s_1 = f"0{s_1}"
+    else:
+        pass
+        
+    # Displaying the result
+    print(f"{s} seconds = {d} DD : {h} HH : {m} MM : {s_1} SS")
+
+convert_from_second_to()
