@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+def convert_Celsius_to_FahrenheitKelvin():
+    """
+    Convert Celsius to Fahrenheit and Kelvin
+
+    This function prompts the user to enter a temperature in degrees Celsius.
+    It then converts the temperature to both Fahrenheit and Kelvin, and prints the results.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    c = int(input("Enter the temperature in °C: "))
+    f = (c * 9/5) + 32
+    k = (c + 273.15)
+    print(f"{c}°C = {f}°F = {k} Kelvin ")
+    
+convert_Celsius_to_FahrenheitKelvin()
