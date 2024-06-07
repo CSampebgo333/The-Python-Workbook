@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+from math import pi as i
+
+def find_CylinderVolume():
+    """
+    Calculate the volume of a cylinder
+
+    Prompts the user to enter the radius and height of the cylinder,
+    then calculates and prints the volume of the cylinder.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    r = float(input("Enter the radius of the cylinder: "))
+    h = float(input("Enter its height: "))
+    area_sufarce = i * r**2
+    volume = area_sufarce * h
+    print(f"The volume of the cynder of radius {r:.1f}, and height {h:.1f} is: {volume:.1f}")
+    
+find_CylinderVolume()
