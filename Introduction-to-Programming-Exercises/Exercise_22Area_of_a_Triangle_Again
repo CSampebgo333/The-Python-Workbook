@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+from math import sqrt
+
+def triangleArea_with_sizes():
+    """
+    Calculate the area of a triangle given its three sides using Heron's formula
+
+    Prompts the user to enter the lengths of the three sides of the triangle, then calculates
+    and prints the area.
+
+    Inputs:
+        s_1: length of the first side (prompted from user)
+        s_2: length of the second side (prompted from user)
+        s_3: length of the third side (prompted from user)
+
+    Returns:
+        None. Prints the area of the triangle to the console.
+    """
+    s_1 = int(input("Enter the size 1: "))
+    s_2 = int(input("Enter the size 2: "))
+    s_3 = int(input("Enter the size 3: "))
+    s = (s_1 + s_2 + s_3) / 2
+    area = sqrt(s * (s - s_1) * (s - s_2) * (s - s_3))
+    print(f"The area of the triangle of sizes {s_1}, {s_2}, and {s_3} is {area:.2f} square unit")
+
+triangleArea_with_sizes()
