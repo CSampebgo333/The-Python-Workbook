@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+def convert_to_seconds():
+    """
+    Convert time units to total seconds
+
+    This function prompts the user to enter a number of days, hours,
+    minutes, and seconds, then calculates and prints the total number
+    of seconds.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    d = int(input("Enter the number of days: "))
+    h = int(input("Enter the number of hours: "))
+    m = int(input("Enter the number of minutes: "))
+    s_1 = int(input("Enter the number of seconds: "))
+    s = (((d * 24 + h) * 60 + m) * 60 + s_1)
+    print(f"{d} days, {h} hours, {m} minutes, {s_1} seconds is: {s} seconds")
+
+convert_to_seconds()
