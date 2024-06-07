@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+def find_BodyMass():
+    """
+    My BMI calculation function
+
+    Prompts the user to enter their height and weight, then calculates
+    and prints their Body Mass Index (BMI).
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    h = float(input("Enter your height in METER: "))
+    w = float(input("Enter your weight in KG: "))
+    b_m_i =  w / (h ** 2)
+    print(f"Your body mass index (BMI): {b_m_i:.2f}")
+    
+find_BodyMass()
