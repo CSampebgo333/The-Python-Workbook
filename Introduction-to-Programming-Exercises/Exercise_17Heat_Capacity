@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+def find_HeatCapacity():
+    """
+    Calculate the heat capacity and cost to heat or cool water
+
+    Prompts the user to enter the mass of water, initial temperature, and desired temperature,
+    then calculates the amount of energy required and the cost associated with heating or cooling the water.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    m = float(input("Enter the mass of water: "))  # Mass of water in kilograms
+    current_temp = float(input("Initial temperature in degree Celsius: "))  # Initial temperature in degrees Celsius
+    desire_temp = float(input("Desire temperature in degree Celsius: "))  # Desired temperature in degrees Celsius
+    delta_temp = abs(desire_temp - current_temp)  # Absolute difference in temperature
+    q = m * 4.186 * delta_temp  # Energy required in Joules (specific heat capacity of water = 4.186 J/g°C)
+    kilowatt_to_joule = 3600000  # Conversion factor from Joules to Kilowatt-hours
+    energy_in_kilowatt = q / kilowatt_to_joule  # Energy in Kilowatt-hours
+    kilowatt_to_cents = 8.9  # Cost per Kilowatt-hour in cents
+    energy_cost = int(energy_in_kilowatt * kilowatt_to_cents)  # Total cost in cents
+
+    if desire_temp - current_temp < 0:
+        print(f"The total amount of energy that must be removed is: {q:.2f} Joule")
+    else:
+        print(f"The total amount of energy that must be added is: {q:.2f} Joule")
+    print(f"The cost of heating the water is: {energy_cost} cents.")
+   
+find_HeatCapacity()
