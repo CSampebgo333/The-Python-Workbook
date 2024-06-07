@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+from math import sqrt
+
+def find_FinalSpeed():
+    """
+    Calculate the final speed of an object in free fall
+
+    This function prompts the user to enter the distance (d)
+    and calculates the final speed (vf) of an object falling from rest
+    under Earth's gravity (a = 9.8 m/s^2).
+
+    Args:
+        None
+
+    Returns:
+        None: The function prints the final speed.
+    """
+    d = int(input("Enter the distance: "))
+    a = 9.8  # Acceleration due to gravity in m/s^2
+    vi = 0   # Initial velocity in m/s
+    vf = sqrt(vi ** 2 + 2 * a * d)  # Final velocity calculation using the kinematic equation
+    print(f"The final speed vf = {vf:.2f} m/s")
+
+find_FinalSpeed()
