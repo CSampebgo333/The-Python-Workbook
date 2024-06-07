@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+def triangleArea():
+    """
+    Calculate the area of a triangle
+
+    Prompts the user to enter the base and height of the triangle,
+    calculates the area, and prints it.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    b = int(input("Enter the base: "))
+    h = int(input("Enter the height: "))
+    area = (b * h) / 2
+    print(f"The area of the triangle of base {b} and height {h} is {area:.2f} square unit")
+
+triangleArea()
