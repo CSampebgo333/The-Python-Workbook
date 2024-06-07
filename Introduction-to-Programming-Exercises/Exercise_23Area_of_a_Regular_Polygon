@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+from math import tan, pi
+
+def regularPolygonArea():
+    """
+    Calculate the area of a regular polygon
+
+    Prompts the user to input the length of the polygon's side and the number of sides.
+
+    Returns:
+        The area of the polygon.
+    """
+    s = int(input("Enter the length of the polygon side: "))
+    n = int(input("Enter the number of sides: "))
+    area = (n * s ** 2) / (4 * tan(pi/n))
+    print(f"The area of the Polygon is: {area:.2f} square units")
+
+regularPolygonArea()
