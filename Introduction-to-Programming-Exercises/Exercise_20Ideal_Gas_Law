@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+def gasLaw():
+    """
+    Ideal Gas Law Calculation
+
+    This function calculates the amount of gas in moles using the ideal gas law.
+
+    Formula: PV = nRT <==> n = PV/RT
+
+    Args:
+        None (inputs are taken from user via input prompts)
+
+    Returns:
+        None (prints the calculated moles of gas)
+    """
+    V = float(input("Enter the volume of gas in Liters: "))
+    T_in_celsius = float(input("Enter the temperature in Celsius: "))
+    P = float(input("Enter the pressure in Pascal: "))
+    R = 8.314  # Ideal gas constant in J/(mol·K)
+    T_in_kelvin = T_in_celsius + 273.15  # Convert Celsius to Kelvin
+    # PV = nRT <==> n = PV/RT
+    n_mole = (P * V) / (R * T_in_kelvin)
+    print(f"The amount of gas is: {n_mole:.3f} moles")
+
+gasLaw()
