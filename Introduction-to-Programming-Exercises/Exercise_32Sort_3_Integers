@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+def sort_ThreeIntegers():
+    """
+    Sorts three integers in ascending order
+
+    Prompts the user to enter three integers and then
+    prints them in ascending order.
+    """
+    n1 = int(input("Enter the the first integer: "))  # Prompt for the first integer
+    n2 = int(input("Enter the the second integer: "))  # Prompt for the second integer
+    n3 = int(input("Enter the the third integer: "))  # Prompt for the third integer
+
+    _min = min(n1, n2, n3)  # Find the minimum value among the three integers
+    _max = max(n1, n2, n3)  # Find the maximum value among the three integers
+    mid = (n1 + n2 + n3) - _min - _max  # Calculate the middle value
+
+    print(f"In the ascending order we have: {_min} < {mid} < {_max}")  # Print the values in ascending order
+
+sort_ThreeIntegers()  # Call the function to execute the sorting
