@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+def discount_Price():
+    """
+    Calculate the total price of bread with a discount
+
+    This function prompts the user to enter the number of breads they want to purchase,
+    calculates the discount price per bread, and then computes the total price for the
+    specified number of breads. It prints the initial price, discount price, and total price.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    # Prompt the user to enter the number of breads
+    n = int(input("Enter the the number of bread you want: "))
+    
+    # Initial price of one bread
+    price_0 = 3.46
+    
+    # Calculate the discount price
+    discount_price = price_0 - (0.6 * price_0)
+    
+    # Calculate the total price for the number of breads
+    total_price = discount_price * n
+    
+    # Print the initial price, discount price, and total price
+    print(f"The initial price per bread is: {price_0} \n\
+    The discount price per bread is: ${discount_price:.2f} \n\
+        The total price for {n} breads is : ${total_price:.2f}")
+
+# Call the function to execute
+discount_Price()
