@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+def sum_IntegerDigits():
+    """
+    Sum of Integer Digits Function
+
+    Prompts the user to enter an integer, then calculates and prints the sum of its digits.
+    The function also prints the sum calculation process step-by-step.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    number = input("Enter the integer: ")  # Prompt the user to enter an integer
+    _sum = 0  # Initialize the sum to zero
+    for i in range(len(number)):  # Loop through each character in the input string
+        _sum += int(number[i])  # Convert the character to an integer and add it to the sum
+        if i == len(number) - 1:  # If this is the last digit
+            print(f"{number[i]} = ", end="")  # Print the last digit followed by '='
+        else:
+            print(f"{number[i]} + ", end="")  # Print the digit followed by '+'
+    print(f"{_sum}")  # Print the final sum
+
+sum_IntegerDigits()  # Call the function to execute the digit sum process
