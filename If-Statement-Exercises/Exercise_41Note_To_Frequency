@@ -15,15 +15,15 @@ def convert_Note_to_Frequency():
         otherwise prints an error message.
     """
     note = input("Enter note name: ")
-    frequency = {'C': 261.63, 'D': 293.66, 'E': 329.63, 'F': 349.23, 
+    frequencies = {'C': 261.63, 'D': 293.66, 'E': 329.63, 'F': 349.23, 
                  'G': 392.00, 'A': 440.00, 'B': 493.88
                 }
     base = note[:-1]  # Extract the note name without the octave
     octave = int(note[-1])  # Extract the octave as an integer
-    if base in frequency:
-        base_4_frequency = frequency[base]
+    if base in frequencies:
+        base_4_frequency = frequencies[base]
         new_frequency = base_4_frequency / (2 ** (4 - octave))
-        print(f"{note}: {new_frequency} Hz")
+        print(f"{note}: {new_frequency} Hertz")
     else:
         print("We can't find your note in our database.\nEnter a valid note!")
 
