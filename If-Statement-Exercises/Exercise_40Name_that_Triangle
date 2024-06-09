@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+def name_Triangle():
+    """
+    Determine the type of triangle based on the lengths of its sides.
+
+    Prompts the user to input the lengths of the three sides of a triangle and
+    determines if the triangle is equilateral, isosceles, or scalene.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    s_1 = int(input("Enter size 1: "))  # Prompt user for the first side length
+    s_2 = int(input("Enter size 2: "))  # Prompt user for the second side length
+    s_3 = int(input("Enter size 3: "))  # Prompt user for the third side length
+    
+    if s_1 == s_2 and s_2 == s_3:
+        print("It is an Equilateral.")  # All sides are equal
+    elif s_1 == s_2 or s_1 == s_3 or s_2 == s_3:
+        print("It is an Isosceles Triangle.")  # Two sides are equal
+    else:
+        print("It is a Scalene Triangle.")  # No sides are equal
+
+name_Triangle()  # Call the function to execute
