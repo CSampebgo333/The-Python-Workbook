@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+def find_square_color():
+    """
+    Determines the color of a chessboard square based on its coordinates.
+
+    The chessboard coordinates are provided as input, and the function prints 
+    the color of the square (either "White" or "Black") based on standard 
+    chessboard coloring rules.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    cord = input("Enter the coordinates: ")
+    if cord[0] in "aceg":
+        if int(cord[-1]) % 2 == 0:
+            print("The square is White.")
+        else:
+            print("The square is Black.")
+    elif cord[0] in "bdfh":
+        if int(cord[-1]) % 2 == 0:
+            print("The square is Black.")
+        else:
+            print("The square is White.")
+    else:
+        print("Invalid coordinates!")
+
+find_square_color()
