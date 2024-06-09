@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+def find_SoundLevel():
+    """
+    Determines the noise level based on decibels (dB)
+
+    Prompts the user to enter a sound level in decibels and
+    prints the corresponding noise source.
+
+    If the input decibel level is out of the valid range (40-130 dB),
+    an error message is printed.
+
+    Returns:
+        None
+    """
+    l = int(input("Enter the sound level in decibels(dB): "))
+    if l < 40 or l > 130:
+        print("Error, enter a valid sound level!")
+    else:
+        if l == 40:
+            print("Quiet room")
+        elif l == 70:
+            print("Alarm clock")
+        elif l == 106:
+            print("Gas lawnmower")
+        elif l == 130:
+            print("Jackhammer")
+        elif l > 40 and l < 70:
+            print("Quiet room & Alarm clock")
+        elif l > 70 and l < 106:
+            print("Alarm clock & Gas lawnmower")
+        elif l > 106 and l < 130:
+            print("Gas lawnmower & Jackhammer")
+        else:
+            pass
+
+find_SoundLevel()
