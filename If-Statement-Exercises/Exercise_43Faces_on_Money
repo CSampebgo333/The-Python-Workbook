@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+def banknote_face():
+    """
+    Banknote face function
+
+    Prompts the user to enter an amount of money in dollars and prints
+    the name of the historical figure on the corresponding U.S. banknote.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    am = int(input("Enter the amount of money in $: "))
+    if am == 1:
+        print("George Washington")
+    elif am == 2:
+        print("Thomas Jefferson")
+    elif am == 5:
+        print("Abraham Lincoln")
+    elif am == 10:
+        print("Alexander Hamilton")
+    elif am == 20:
+        print("Andrew Jackson")
+    elif am == 50:
+        print("Ulysses S. Grant")
+    elif am == 100:
+        print("Benjamin Franklin")
+    else:
+        print("No such banknote!")
+        
+banknote_face()
