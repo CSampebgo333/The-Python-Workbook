@@ -9,71 +9,31 @@ def find_ZodiacSign():
     Returns:
         None
     """
+    zodiac_signs = {
+        "January": (20, "Capricorn", "Aquarius"),
+        "February": (19, "Aquarius", "Pisces"),
+        "March": (21, "Pisces", "Aries"),
+        "April": (20, "Aries", "Taurus"),
+        "May": (21, "Taurus", "Gemini"),
+        "June": (21, "Gemini", "Cancer"),
+        "July": (23, "Cancer", "Leo"),
+        "August": (23, "Leo", "Virgo"),
+        "September": (23, "Virgo", "Libra"),
+        "October": (23, "Libra", "Scorpio"),
+        "November": (22, "Scorpio", "Sagittarius"),
+        "December": (22, "Sagittarius", "Capricorn")
+    }
+
     m = input("Enter your birthday month: ")
     d = int(input("Enter birthday day: "))
-    months = "January February March April May June July August September October November December"
-    if m in months.split():
-        if m == "January":
-            if d > 19:
-                print("Your Zodiac sign is: Aquarius.")
-            else:
-                print("Your Zodiac sign is: Capricorn.")
-        elif m == "February":
-            if d > 18:
-                print("Your Zodiac sign is: Pisces.")
-            else:
-                print("Your Zodiac sign is: Aquarius.")
-        elif m == "March":
-            if d > 20:
-                print("Your Zodiac sign is: Aries.")
-            else:
-                print("Your Zodiac sign is: Pisces.")
-        elif m == "April":
-            if d > 19:
-                print("Your Zodiac sign is: Taurus.")
-            else:
-                print("Your Zodiac sign is: Aries.")
-        elif m == "May":
-            if d > 20:
-                print("Your Zodiac sign is: Gemini.")
-            else:
-                print("Your Zodiac sign is: Taurus.")
-        elif m == "June":
-            if d > 20:
-                print("Your Zodiac sign is: Cancer.")
-            else:
-                print("Your Zodiac sign is: Taurus.")
-        elif m == "July":
-            if d > 22:
-                print("Your Zodiac sign is: Leo.")
-            else:
-                print("Your Zodiac sign is: Cancer.")
-        elif m == "August":
-            if d > 22:
-                print("Your Zodiac sign is: Virgo.")
-            else:
-                print("Your Zodiac sign is: Leo.")
-        elif m == "September":
-            if d > 22:
-                print("Your Zodiac sign is: Libra.")
-            else:
-                print("Your Zodiac sign is: Virgo.")
-        elif m == "October":
-            if d > 22:
-                print("Your Zodiac sign is: Scorpio.")
-            else:
-                print("Your Zodiac sign is: Libra.")
-        elif m == "November":
-            if d > 21:
-                print("Your Zodiac sign is: Sagittarius.")
-            else:
-                print("Your Zodiac sign is: Scorpio.")
-        elif m == "December":
-            if d > 21:
-                print("Your Zodiac sign is: Capricorn.")
-            else:
-                print("Your Zodiac sign is: Sagittarius.")
+
+    if m in zodiac_signs:
+        cutoff, sign1, sign2 = zodiac_signs[m]
+        if d < cutoff:
+            print(f"Your Zodiac sign is: {sign1}.")
         else:
-            print("Invalid month!")
-                
+            print(f"Your Zodiac sign is: {sign2}.")
+    else:
+        print("Invalid month!")
+
 find_ZodiacSign()
