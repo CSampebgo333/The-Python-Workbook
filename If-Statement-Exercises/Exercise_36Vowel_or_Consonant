@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+def is_Consonant_or_Vowel():
+    """
+    Check if a letter is a consonant or a vowel.
+
+    Prompts the user to input a letter and determines if the letter
+    is a vowel, consonant, or sometimes a vowel (for the letter 'y').
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    l = input("Enter the letter: ")
+    if l in "aeiou":
+        print(f"The letter \"{l}\" is a Vowel.")
+    elif l == "y":
+        print(f"The letter \"{l}\" is sometimes a Vowel and sometimes a Consonant.")
+    else:
+        print(f"The letter \"{l}\" is a Consonant.")
+
+is_Consonant_or_Vowel()
