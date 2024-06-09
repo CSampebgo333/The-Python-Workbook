@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+def is_Even_or_Odd():
+    """
+    Function to check if a number is even or odd
+
+    Prompts the user to enter a number and checks whether it is even or odd.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    n = int(input("Enter the number: "))
+    if n % 2 == 0:
+        print(f"{n} is Even!")
+    else:
+        print(f"{n} is Odd!")
+        
+is_Even_or_Odd()
