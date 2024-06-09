@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+def which_Holiday():
+    """
+    My holiday function
+
+    Prompts the user to enter a month and a day, then prints the corresponding holiday
+    if it matches specific dates. If no match is found, it prints "No Holiday!"
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    m = input("Enter the month: ")
+    d = input("Enter the day: ")
+    if m.lower() == "january" and d == "1":
+        print("New year’s day")
+    elif m.lower() == "july" and d == "1":
+        print("Canada day")
+    elif m.lower() == "december" and d == "25":
+        print("Christmas day")
+    else:
+        print("No Holiday!")
+
+which_Holiday()
