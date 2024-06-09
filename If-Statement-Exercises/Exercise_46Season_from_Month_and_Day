@@ -1,0 +1,59 @@
+#!/usr/bin/python3
+def find_Season():
+    """
+    Function to determine the season based on month and day
+
+    Prompts the user to input a month and day, and then determines
+    the season of the given date.
+
+    Returns:
+        Prints the season of the given date.
+    """
+    # Get the month and day from user input
+    m = input("Enter the month: ")
+    d = int(input("Enter the day: "))
+
+    # Define months for each season
+    spring = "April May June"
+    summer = "July August September"
+    fall = "October November December"
+    winter = "January February March"
+
+    # Determine the season based on the month and day
+    if m in spring.split():
+        if m == "June":
+            if d >= 21:
+                print(f"{m} {d} is in Summer.")
+            else:
+                print(f"{m} {d} is in Spring.")
+        else:
+            print(f"{m} {d} is in Spring.")
+    elif m in summer.split():
+        if m == "September":
+            if d >= 22:
+                print(f"{m} {d} is in Fall.")
+            else:
+                print(f"{m} {d} is in Summer.")
+        else:
+            print(f"{m} {d} is in Summer.")
+    elif m in fall.split():
+        if m == "December":
+            if d >= 21:
+                print(f"{m} {d} is in Winter.")
+            else:
+                print(f"{m} {d} is in Fall.")
+        else:
+            print(f"{m} {d} is in Fall.")
+    elif m in winter.split():
+        if m == "March":
+            if d >= 20:
+                print(f"{m} {d} is in Spring.")
+            else:
+                print(f"{m} {d} is in Winter.")
+        else:
+            print(f"{m} {d} is in Winter.")
+    else:
+        print("Invalid entry!")
+
+# Call the function to determine the season
+find_Season()
