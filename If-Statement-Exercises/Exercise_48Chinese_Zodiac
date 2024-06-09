@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+def find_ZodiacAnimal():
+    """
+    Find Zodiac Animal function
+
+    This function determines the Chinese Zodiac animal for a given year.
+
+    The Chinese Zodiac cycle repeats every 12 years. This function calculates
+    the corresponding Zodiac animal based on the input year.
+
+    Returns:
+        None
+    """
+    zodiac_signs = {
+        "Dragon": 2000, "Snake": 2001, "Horse": 2002, "Sheep": 2003,
+        "Monkey": 2004, "Rooster": 2005, "Dog": 2006, "Pig": 2007,
+        "Rat": 2008, "Ox": 2009, "Tiger": 2010, "Hare": 2011        
+    }
+
+    year = int(input("Enter your year: "))
+    pattern = (year - 2000) % 12
+    key_year = 2000 + pattern
+    for key, value in zodiac_signs.items():
+        if value == key_year:
+            print(f"{year} corresponds to {key}")
+        else:
+            continue
+        
+find_ZodiacAnimal()
