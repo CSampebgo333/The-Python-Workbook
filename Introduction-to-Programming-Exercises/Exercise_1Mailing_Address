@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def print_MailingAddress():
-    """Prints the mailing address of Clément Sampebgo
+    """
+    Prints the mailing address of Clément Sampebgo
 
     This function prints the name, street, city, zip code, and country of
     Clément Sampebgo in a formatted manner.
