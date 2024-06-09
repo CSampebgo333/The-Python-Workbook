@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+def find_ShapeName():
+    """
+    My shape name function
+
+    Prompts the user to enter the number of sides of a shape and prints the
+    corresponding shape name.
+
+    If the number of sides is less than 3 or greater than 10, it prints an error message.
+
+    Returns:
+        None
+    """
+    n_s = int(input("Enter the number of sides: "))
+    if n_s < 3 or n_s > 10:
+        print("Error, enter a valid number of sides of the shape: ")
+    else:
+        if n_s == 3:
+            print("It is a Triangle")
+        elif n_s == 4:
+            print("It is a Quadrilateral")
+        elif n_s == 5:
+            print("It is a Pentagon")
+        elif n_s == 6:
+            print("It is a Hexagon")
+        elif n_s == 7:
+            print("It is a Heptagon")
+        elif n_s == 8:
+            print("It is an Octagon")
+        elif n_s == 9:
+            print("It is a Nonagon")
+        elif n_s == 10:
+            print("It is a Decagon")
+        else:
+            pass
+
+find_ShapeName()
