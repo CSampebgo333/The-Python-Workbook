@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+def convert_Note_to_Frequency():
+    """
+    Convert musical note to its frequency
+
+    Prompts the user to enter a musical note name, and calculates
+    the frequency of that note based on a predefined dictionary
+    of note frequencies.
+
+    The frequency dictionary is based on the frequencies of notes
+    in the 4th octave.
+
+    Returns:
+        Prints the frequency of the note in Hz if found,
+        otherwise prints an error message.
+    """
+    note = input("Enter note name: ")
+    frequency = {'C': 261.63, 'D': 293.66, 'E': 329.63, 'F': 349.23, 
+                 'G': 392.00, 'A': 440.00, 'B': 493.88
+                }
+    base = note[:-1]  # Extract the note name without the octave
+    octave = int(note[-1])  # Extract the octave as an integer
+    if base in frequency:
+        base_4_frequency = frequency[base]
+        new_frequency = base_4_frequency / (2 ** (4 - octave))
+        print(f"{note}: {new_frequency} Hz")
+    else:
+        print("We can't find your note in our database.\nEnter a valid note!")
+
+convert_Note_to_Frequency()
