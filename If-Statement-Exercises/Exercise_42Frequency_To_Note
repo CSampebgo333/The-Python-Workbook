@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+def convert_Frequency_to_Note():
+    """
+    Convert frequency to musical note
+
+    This function takes a frequency input from the user and
+    matches it with the predefined frequencies of musical notes.
+    If the frequency matches one of the predefined notes,
+    it prints the corresponding note. Otherwise, it prints
+    an invalid note frequency message.
+    """
+    frequency = float(input("Enter note frequency: "))  # Input frequency
+    frequencies = {
+        'C4': 261.63, 'D4': 293.66, 'E4': 329.63, 'F4': 349.23, 
+        'G4': 392.00, 'A4': 440.00, 'B4': 493.88
+    }  # Predefined frequencies of musical notes
+    checking = False  # Flag to check if a match is found
+    note = ""  # Variable to store the matched note
+
+    # Iterate through the dictionary to find a matching frequency
+    for key, value in frequencies.items():
+        if frequency == value:
+            note = key
+            checking = True
+        else:
+            continue
+
+    # Print the result based on whether a match was found
+    if checking:
+        print(f"{frequency} Hertz corresponds to {note} note")
+    else:
+        print("Invalid note frequency!")
+        
+convert_Frequency_to_Note()
