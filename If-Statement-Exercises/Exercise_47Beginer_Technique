@@ -1,0 +1,82 @@
+#!/usr/bin/python3
+def find_ZodiacSign():
+    """
+    Function to find the Zodiac sign based on birthday month and day.
+
+    Prompts the user to input their birthday month and day, and then 
+    determines their Zodiac sign based on these inputs.
+    """
+    m = input("Enter your birthday month: ")  # Get the birthday month from the user
+    d = int(input("Enter birthday day: "))    # Get the birthday day from the user
+    months = "January February March April May June July August September October November December"
+    
+    # Check if the entered month is valid
+    if m in months.split():
+        # Determine the Zodiac sign based on the month and day
+        if m == "January":
+            if d > 19:
+                print("Your Zodiac sign is: Aquarius.")
+            else:
+                print("Your Zodiac sign is: Capricorn.")
+        elif m == "February":
+            if d > 18:
+                print("Your Zodiac sign is: Pisces.")
+            else:
+                print("Your Zodiac sign is: Aquarius.")
+        elif m == "March":
+            if d > 20:
+                print("Your Zodiac sign is: Aries.")
+            else:
+                print("Your Zodiac sign is: Pisces.")
+        elif m == "April":
+            if d > 19:
+                print("Your Zodiac sign is: Taurus.")
+            else:
+                print("Your Zodiac sign is: Aries.")
+        elif m == "May":
+            if d > 20:
+                print("Your Zodiac sign is: Gemini.")
+            else:
+                print("Your Zodiac sign is: Taurus.")
+        elif m == "June":
+            if d > 20:
+                print("Your Zodiac sign is: Cancer.")
+            else:
+                print("Your Zodiac sign is: Gemini.")  # Corrected from Taurus to Gemini
+        elif m == "July":
+            if d > 22:
+                print("Your Zodiac sign is: Leo.")
+            else:
+                print("Your Zodiac sign is: Cancer.")
+        elif m == "August":
+            if d > 22:
+                print("Your Zodiac sign is: Virgo.")
+            else:
+                print("Your Zodiac sign is: Leo.")
+        elif m == "September":
+            if d > 22:
+                print("Your Zodiac sign is: Libra.")
+            else:
+                print("Your Zodiac sign is: Virgo.")
+        elif m == "October":
+            if d > 22:
+                print("Your Zodiac sign is: Scorpio.")
+            else:
+                print("Your Zodiac sign is: Libra.")
+        elif m == "November":
+            if d > 21:
+                print("Your Zodiac sign is: Sagittarius.")
+            else:
+                print("Your Zodiac sign is: Scorpio.")
+        elif m == "December":  # Corrected spelling from "Decmber" to "December"
+            if d > 21:
+                print("Your Zodiac sign is: Capricorn.")
+            else:
+                print("Your Zodiac sign is: Sagittarius.")
+        else:
+            print("Invalid month!")  # This condition is never reached because the month is already validated
+    else:
+        print("Invalid month!")  # Handle the case where the entered month is not valid
+
+# Call the function to find the Zodiac sign
+find_ZodiacSign()
