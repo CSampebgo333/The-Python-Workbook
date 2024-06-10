@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+def find_Magnitude():
+    """
+    Determine the description of an earthquake based on its magnitude
+
+    Prompts the user to enter a magnitude and prints the corresponding description.
+    """
+    m = float(input("Enter a magnitude: "))
+    if m >= 2 and m < 3:
+        print("Very minor.")
+    elif m >= 3 and m < 4:
+        print("Minor")
+    elif m >= 4 and m < 5:
+        print("Light")
+    elif m >= 5 and m < 6:
+        print("Moderate")
+    elif m >= 6 and m < 7:
+        print("Strong")
+    elif m >= 7 and m < 8:
+        print("Major")
+    elif m >= 8 and m < 10:
+        print("Great")
+    elif m > 10:
+        print("Meteoric")
+    else:
+        print("Invalid magnitude")
+
+find_Magnitude()
