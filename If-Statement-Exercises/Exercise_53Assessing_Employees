@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+def employees_Assessement():
+    """
+    Employees' performance assessment function
+
+    Prompts the user to enter a performance rate and calculates the corresponding raise based on the rate.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    rate = float(input("Enter a rate: "))  # Prompt user to enter a rate and convert it to float
+    if rate == 0.0:
+        print("Unacceptable performance!")  # Print message for unacceptable performance
+        _raise = 2400 * rate  # Calculate raise based on rate
+        print(f"Raise: ${_raise:.2f}")  # Print the calculated raise formatted to 2 decimal places
+    elif rate == 0.4:
+        print("Acceptable performance!")  # Print message for acceptable performance
+        _raise = 2400 * rate  # Calculate raise based on rate
+        print(f"Raise: ${_raise:.2f}")  # Print the calculated raise formatted to 2 decimal places
+    elif rate == 0.6:
+        print("Meritorious performance!")  # Print message for meritorious performance
+        _raise = 2400 * rate  # Calculate raise based on rate
+        print(f"Raise: ${_raise:.2f}")  # Print the calculated raise formatted to 2 decimal places
+    else:
+        print("Error: Invalid rate entered!")  # Print error message for invalid rate
+
+employees_Assessement()  # Call the employees_Assessement function
