@@ -1,0 +1,77 @@
+#!/usr/bin/python3
+def compute_CellPhoneBill():
+    """
+    Compute the total cellphone bill based on airtime minutes and SMS count.
+
+    The function calculates the bill considering base charges, additional charges
+    for minutes and messages exceeding 50, 911 fees, and tax.
+
+    Inputs:
+        - Number of airtime minutes (int)
+        - Number of SMS (int)
+
+    Returns:
+        None. Prints the detailed bill breakdown and the total amount.
+    """
+    # Get input from the user for the number of airtime minutes and SMS
+    mi = int(input("Enter the number of airtime minutes: "))
+    msg = int(input("Enter the number of SMS: "))
+    
+    # Initialize the bill components
+    final_bill = 0
+    airtime_bill = 0
+    charge_before_tax = 0
+    mi_add_bill = 0
+    msg_add_bill = 0
+    add_charge = 0.44  # Fixed 911 fees
+    tax = 0.05  # Tax rate
+    
+    # Check for invalid input
+    if mi < 0 or msg < 0:
+        print("Invalid entry!")
+    elif mi < 0 and msg < 0:
+        print("Invalid entry!")
+    else:
+        # Calculate additional charges for minutes
+        if mi <= 50:
+            mi_add_bill = 0
+        else:
+            for n in range(mi - 50):
+                mi_add_bill += 0.25
+        
+        # Calculate additional charges for messages
+        if msg <= 50:
+            msg_add_bill = 0
+        else:
+            for n in range(msg - 50):
+                msg_add_bill += 0.15
+        
+        # Determine base airtime bill
+        if mi == 0 and msg == 0:
+            airtime_bill = 0
+        else:
+            airtime_bill = 15
+        
+        # Calculate the total charges before tax
+        base_charge = airtime_bill + mi_add_bill + msg_add_bill
+        charge_before_tax = base_charge + add_charge
+        
+        # Calculate the final bill with tax
+        final_bill = charge_before_tax + tax * (charge_before_tax)
+        
+        # Print detailed bill components
+        if airtime_bill > 0:
+            print(f"The base charge is: ${airtime_bill:.2f}")
+            print(f"The tax charge is: ${tax * (charge_before_tax):.2f}")
+        
+        if mi_add_bill > 0:
+            print(f"The additional minutes charge is: ${mi_add_bill:.2f}")
+        
+        if msg_add_bill > 0:
+            print(f"The additional messages charge is: ${msg_add_bill:.2f}")
+        
+        print(f"The 911 fees are: ${add_charge:.2f}")
+        print(f"The total bill amount is: ${final_bill:.2f}")
+
+# Call the function to compute the cellphone bill
+compute_CellPhoneBill()
