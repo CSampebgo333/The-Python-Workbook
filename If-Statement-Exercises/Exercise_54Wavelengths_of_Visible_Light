@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+def find_WavelengthColor():
+    """
+    Find the color corresponding to a given wavelength
+
+    This function maps a wavelength in nanometers to a color based on
+    standard ranges for the visible spectrum.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    # Define the wavelength ranges for different colors
+    colors = {
+        "Violet": (380, 450),
+        "Blue": (450, 495),
+        "Green": (495, 570),
+        "Yellow": (570, 590),
+        "Orange": (590, 620),
+        "Red": (620, 750)
+    }
+    
+    # Prompt the user to enter a wavelength
+    wavelength = int(input("Enter the Wavelength: "))
+    
+    # Check if the wavelength is within the valid range
+    if wavelength < 380 or wavelength > 750:
+        print("Error: Invalid wavelength entered!")
+    else:
+        # Iterate over the color ranges to find the corresponding color
+        for color in colors:
+            wave_1, wave_2 = colors[color]
+            if wave_1 <= wavelength and wavelength < wave_2:
+                print(f"{wavelength} corresponds to {color}")
+            else:
+                continue
+
+# Call the function to execute the wavelength to color mapping
+find_WavelengthColor()
