@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+def name_Frequency():
+    """
+    Function to determine the type of electromagnetic wave based on frequency
+
+    This function prompts the user to input a frequency value, and then determines
+    which type of electromagnetic wave corresponds to the given frequency.
+
+    Returns:
+        None
+    """
+    # Dictionary containing frequency ranges for different types of electromagnetic waves
+    frequencies = {
+        "Radio waves": (0, 3 * 10**9),
+        "Microwaves": (3 * 10**9, 3 * 10**12),
+        "Infrared light": (3 * 10**12, 4.3 * 10**14),
+        "Visible light": (4.3 * 10**14, 7.5 * 10**14),
+        "Ultraviolet light": (7.5 * 10**14, 3 * 10**17),
+        "X-rays": (3 * 10**17, 3 * 10**19),
+        "Gamma rays": (3 * 10**19, 3 * 10**100)
+    }
+    
+    # Prompt user for input frequency
+    input_frequency = float(input("Enter the Frequency: "))
+    
+    # Check if the input frequency is a valid non-negative number
+    if input_frequency < 0:
+        print("Error: Invalid frequency entered!")
+    else:
+        # Iterate over the dictionary to find the matching frequency range
+        for frequency in frequencies:
+            freq_1, freq_2 = frequencies[frequency]
+            # Check if the input frequency falls within the current range
+            if freq_1 <= input_frequency < freq_2:
+                print(f"{input_frequency} Hertz correspond to {frequency}")
+            else:
+                continue
+
+# Call the function to execute
+name_Frequency()
