@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+def get_grade_letter():
+    """
+    Determines the letter grade based on the numeric grade entered by the user.
+
+    This function prompts the user to enter a numeric grade, and then it checks 
+    this grade against a dictionary of grade ranges to determine the corresponding 
+    letter grade. If the entered grade does not fall within any of the defined ranges,
+    an error message is displayed.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    grade_points = {
+        "A+": (4.0, 4.0), "A-": (3.7, 3.9),
+        "B+": (3.3, 3.6), "B": (3.0, 3.2), "B-": (2.7, 2.9),
+        "C+": (2.3, 2.6), "C": (2.0, 2.2), "C-": (1.7, 1.9),
+        "D+": (1.3, 1.6), "D": (1.0, 1.2), "F": (0.0, 0.9)
+    }
+
+    grade = float(input("Enter a grade: "))  # Prompt the user to enter a numeric grade
+    checking = False  # Initialize a flag to check if a valid grade was found
+    for grades in grade_points:  # Iterate through the grade points dictionary
+        grade_1, grade_2 = grade_points[grades]  # Get the grade range for the current letter grade
+        if grade_1 <= grade and grade <= grade_2:  # Check if the entered grade falls within the current range
+            print(f"{grade} corresponds to {grades}.")  # Print the corresponding letter grade
+            checking = True  # Set the flag to True, indicating a valid grade was found
+        else:
+            continue  # Continue to the next iteration if the grade does not fall within the current range
+    
+    if checking:
+        pass  # Do nothing if a valid grade was found
+    else:
+        print("Error: Invalid grade entered!")  # Print an error message if no valid grade was found
+get_grade_letter()
