@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+from math import sqrt
+
+def compute_roots():
+    """
+    Compute the roots of a quadratic equation
+
+    Prompts the user to input coefficients a, b, and c of the quadratic equation
+    ax² + bx + c = 0 and computes its roots.
+
+    Returns:
+        Prints the roots of the quadratic equation or a message if no real roots exist.
+    """
+    print("f(x) = ax² + bx + c <==> ax² + bx + c = 0")
+    a = int(input("Enter a: "))
+    b = int(input("Enter b: "))
+    c = int(input("Enter c: "))
+    dis = b ** 2 - 4 * a * c  # Calculate the discriminant
+
+    if dis < 0:
+        # No real solutions
+        print("f(x) = 0 does not have a solution.")
+    elif dis == 0:
+        # One real solution
+        print("f(x) = 0 has a unique real solution:")
+        x = -(b / (2 * a))
+        print(f"x = {x:.2f}")
+    else:
+        # Two real solutions
+        print("f(x) = 0 has two real solutions:")
+        x1 = (-b - sqrt(dis)) / (2 * a)
+        x2 = (-b + sqrt(dis)) / (2 * a)
+        print(f"x1 = {x1:.2f}")
+        print(f"x2 = {x2:.2f}")
+
+compute_roots()
