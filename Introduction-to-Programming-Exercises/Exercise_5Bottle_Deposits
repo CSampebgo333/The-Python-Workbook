@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def find_your_refund():
-    """Calculate the total refund for drink containers
+    """
+    Calculate the total refund for drink containers
 
     This function prompts the user to input the number of drink containers
     holding one liter or less, and the number of drink containers holding
