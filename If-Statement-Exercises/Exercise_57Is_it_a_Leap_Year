@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+def is_LeapYear():
+    """
+    Check if a year is a leap year
+
+    Asks the user to input a year and determines if it is a leap year.
+    A year is a leap year if it is divisible by 400 or divisible by 4 but not by 100.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    y = int(input("Enter a Year: "))
+    if y % 400 == 0:
+        print(f"{y} is a Leap Year.")
+    elif y % 100 == 0:
+        print(f"{y} is Not a Leap Year.")
+    elif y % 4 == 0:
+        print(f"{y} is a Leap Year.")
+    else:
+        print(f"{y} is Not a Leap Year.")
+
+is_LeapYear()
