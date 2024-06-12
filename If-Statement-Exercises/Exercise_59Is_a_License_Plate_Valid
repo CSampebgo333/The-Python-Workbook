@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+def is_LicensePlateValid():
+    """
+    Check if a license plate is valid
+
+    Prompts the user to input a license plate number and checks if it follows
+    the old or new format of license plates.
+
+    Args:
+        None
+
+    Returns:
+        Prints a message indicating if the license plate is valid,
+        and whether it follows the old or new version format.
+    """
+    licence = input("Enter a licence plate: ")
+    check_letter = False
+    check_number = False
+
+    # Check for old version format (3 letters followed by 3 digits)
+    if len(licence) == 6:
+        if licence[:-3].isalpha() and licence[:-3].isupper():
+            check_letter = True
+        if licence[3:].isdigit():
+            check_number = True
+        if check_letter and check_number:
+            print("Old version of licence plate!!")
+        else:
+            print("Invalid license plate!")
+
+    # Check for new version format (4 digits followed by 3 letters)
+    elif len(licence) == 7:
+        if licence[:-3].isdigit():
+            check_number = True
+        if licence[4:].isalpha() and licence[4:].isupper():
+            check_letter = True
+        if check_letter and check_number:
+            print("New version of licence plate!")
+        else:
+            print("Invalid license plate!")
+    
+    # Invalid license plate format
+    else:
+        print("Invalid license plate!")
+
+# Call the function to validate the license plate
+is_LicensePlateValid()
