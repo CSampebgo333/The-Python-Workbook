@@ -1,0 +1,134 @@
+#!/usr/bin/python3
+
+def find_NextDay():
+    """
+    Function to find the next day date.
+
+    Nested Functions:
+        is_LeapYear: Determines if a given year is a leap year.
+
+    Prompts:
+        Year, month, and day input from the user.
+
+    Prints:
+        The next day date in YY-MM-DD format or error messages if the input is invalid.
+    """
+    
+    def is_LeapYear(y):
+        """
+	Checks if a year is a leap year.
+
+        Args:
+            y: Year to check.
+
+        Returns:
+            True if y is a leap year, False otherwise.
+        """
+        if y % 400 == 0:
+            return True
+        elif y % 100 == 0:
+            return False
+        elif y % 4 == 0:
+            return True
+        else:
+            return False
+
+    print("Date format: YY-MM-DD <==> 2002-03-22")
+    
+    # User inputs for year, month, and day.
+    y = int(input("Enter the Year: "))
+    m = int(input("Enter the Month: "))
+    d = int(input("Enter the Day: "))
+    
+    # Initialize next day, month, and year variables.
+    next_year = y
+    next_month = m
+    next_day = d
+    error = False
+    
+    if y > 0 and m > 0 and d > 0:
+        if m <= 12:
+            if d <= 31:
+                if m in [1, 3, 5, 7, 8, 10, 12]:
+                    # For months with 31 days
+                    if d <= 30:
+                        next_day = d + 1
+                    elif d == 31:
+                        if m == 12:
+                            next_year = y + 1
+                            next_month = 1
+                            next_day = 1
+                        else:
+                            next_month = m + 1
+                            next_day = 1
+                elif m in [4, 6, 9, 11]:
+                    # For months with 30 days
+                    if d <= 29:
+                        next_day = d + 1
+                    elif d == 30:
+                        next_month = m + 1
+                        next_day = 1
+                    else:
+                        error = True
+                        print("Invalid day!\nFor \"30 Days Months\", Days can't go beyond 30.")
+                elif m == 2:
+                    # For February
+                    if is_LeapYear(y):
+                        if d <= 29:
+                            if m == 2 and d == 28:
+                                next_day = d + 1
+                            elif m == 2 and d == 29:
+                                next_month = m + 1
+                                next_day = 1
+                        else:
+                            error = True
+                            print("Invalid day! \"February\" days can't be greater than 29.")
+                    else:
+                        if d <= 29:
+                            if m == 2 and d == 28:
+                                next_month = m + 1
+                                next_day = 1
+                            elif m == 2 and d == 29:
+                                error = True
+                                print(f"{y} is not a Leap Year.\nTherefore, February doesn't have 29 days.")
+                            else:
+                                next_day = d + 1
+                        else:
+                            error = True
+                            print("Invalid day! February days can't be greater than 29.")
+            else:
+                print("Invalid day! A Day can't be greater than 31.")
+                error = True
+        else:
+            print("Invalid month! A Month can't be greater than 12.")
+            error = True
+    else:
+        error = True
+        if y <= 0:
+            print("Invalid Year! A Year can't be negative or 0")
+        if m <= 0:
+            print("Invalid Month! A Month can't be negative or 0.")
+        if d <= 0:
+            print("Invalid Day! A Day can't be negative or 0.")
+    
+    if error:
+        pass
+    else:
+        if next_month < 10:
+            if next_day < 10:
+                print(f"Next Day Date: {next_year}-0{next_month}-0{next_day}")
+            elif next_day >= 10:
+                print(f"Next Day Date: {next_year}-0{next_month}-{next_day}")
+            else:
+                pass
+        elif next_month >= 10:
+            if next_day < 10:
+                print(f"Next Day Date: {next_year}-{next_month}-0{next_day}")
+            elif next_day >= 10:
+                print(f"Next Day Date: {next_year}-{next_month}-{next_day}")
+            else:
+                pass
+        else:
+            pass
+
+find_NextDay()
