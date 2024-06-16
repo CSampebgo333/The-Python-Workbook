@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+
+"""
+    My price adjustment function
+
+    This script iterates through a list of purchase prices, applies a 60% discount to each, 
+    and prints the original price, the discount amount, and the new price.
+
+    Variables:
+        purchases: list of float
+            The list of original purchase prices.
+        original_price: float
+            The original price of an item.
+        discount_amount: float
+            The discount applied to the original price (60%).
+        new_amount: float
+            The price after the discount has been applied.
+
+    Output:
+        Prints the original price, discount amount, and new price for each item.
+"""
+
+# List of purchase prices
+purchases = [4.95, 9.95, 14.95, 19.95, 24.95]
+
+# Iterate over each item in the purchases list
+for item in purchases:
+    # Store the original price of the item
+    original_price = item
+
+    # Calculate the discount amount (60% of the original price)
+    discount_amount = 0.6 * item
+
+    # Calculate the new amount after discount
+    new_amount = original_price - discount_amount
+
+    # Print the original price, discount amount, and new amount
+    print(f"Original price: ${original_price:.2f}", end="\t")
+    print(f"Discount amount: ${discount_amount:.2f}", end="\t")
+    print(f"New amount: ${new_amount:.2f}")
