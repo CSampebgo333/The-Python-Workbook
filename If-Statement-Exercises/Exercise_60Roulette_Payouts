@@ -2,7 +2,7 @@
 
 import random
 
-def paly_RoulettePayout():
+def play_RoulettePayout():
     """
     Roulette Payout Function
 
@@ -20,14 +20,17 @@ def paly_RoulettePayout():
     """
     
     # Generate a random bet between 1 and 38
+    # This represents the number the ball lands on in roulette
     bet = random.randint(1, 38)
     
     # Check if the bet is in the list of Red numbers
+    # These are the specific numbers that are colored red on a roulette wheel
     if bet in (1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36):
         print(f"Pay {bet}") # Pay the specific number
         print("Pay Red")    # Pay Red
         
         # Check if the number is Even or Odd
+        # Numbers divisible by 2 are even, otherwise odd
         if bet % 2 == 0:
             print("Pay Even") # Pay Even
         else:
@@ -40,6 +43,7 @@ def paly_RoulettePayout():
             print("Pay 19 to 36") # Pay 19 to 36
         
     # Check if the bet is 0 or 00
+    # In this case, 37 represents 0 and 38 represents 00
     elif bet in (37, 38):
         if bet == 37:
             print("Pay 0") # Pay 0
@@ -64,4 +68,5 @@ def paly_RoulettePayout():
            print("Pay 19 to 36") # Pay 19 to 36
            
 # Call the function to simulate the roulette payout
-paly_RoulettePayout()
+# This will print the payout details for a randomly chosen number
+play_RoulettePayout()
