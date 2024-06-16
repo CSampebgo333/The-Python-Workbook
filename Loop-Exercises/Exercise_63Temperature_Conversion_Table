@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def temperatureConversion():
+def temperature_Conversion():
     """
     My temperature conversion function
 
@@ -36,4 +36,4 @@ def temperatureConversion():
             print("_"*35)
         
 # Call the function to execute the temperature conversion and print the table
-temperatureConversion()
+temperature_Conversion()
