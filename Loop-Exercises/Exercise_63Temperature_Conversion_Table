@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+
+def temperatureConversion():
+    """
+    My temperature conversion function
+
+    This function converts temperatures from Celsius to Fahrenheit
+    and prints them in a nicely formatted table.
+
+    The table shows temperatures from 0°C to 100°C in steps of 10°C.
+
+    Returns:
+        None
+    """
+    # Print a line of underscores to make the top border of the table
+    print("_"*35)
+    
+    # Print the headers for the table: "Celcius(°C)" and "Fahrenheit(°F)"
+    print(f"{'Celcius(°C)':<15}{'|':<5}{'Fahrenheit(°F)':>15}")
+    
+    # Print another line of underscores to separate the header from the data
+    print("_"*35)
+    
+    # Loop through temperatures from 0 to 100 degrees Celsius
+    for temp in range(0, 101):
+        # Check if the temperature is a multiple of 10
+        if temp % 10 == 0:
+            # Convert the temperature from Celsius to Fahrenheit
+            fahrenheit = (temp * 9/5) + 32
+            
+            # Print the Celsius temperature and the corresponding Fahrenheit temperature
+            # The temperatures are formatted to show two decimal places
+            print(f"{temp:6.2f} °C{'|':>7}{'':<3}{fahrenheit:9.2f} °F")
+            
+            # Print another line of underscores to make a border below each row of data
+            print("_"*35)
+        
+# Call the function to execute the temperature conversion and print the table
+temperatureConversion()
