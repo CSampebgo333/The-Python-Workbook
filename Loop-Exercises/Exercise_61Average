@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+
+# Initialize the program launch flag, total sum, and count of entered values
+launch_program = True
+total = 0
+count = 0
+
+# Prompt the user to start entering values
+print("Enter the values as many as you want and '0' to stop:\n")
+
+# Loop to get user input until the user enters '0'
+while launch_program:
+    try:
+        n = float(input("Enter a value: "))
+        # Check if the entered value is '0'
+        if n == 0:
+            launch_program = False
+        else:
+            # Add the entered value to the total sum
+            total += n
+            # Increment the count of entered values
+            count += 1
+    except ValueError:
+        # Handle the case where the entered value is not an integer
+        print("Invalid value entered!")
+
+# Calculate and print the average of the entered values
+try:
+    average = total / count
+    print(f"The average is: {average:.2f}")
+except ZeroDivisionError:
+    # Handle the case where no values have been entered
+    print("Error: nothing has yet been entered!")
